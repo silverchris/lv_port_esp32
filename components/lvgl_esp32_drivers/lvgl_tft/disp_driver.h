@@ -15,6 +15,7 @@ extern "C" {
 #include <stdbool.h>
 #include "lvgl/lvgl.h"
 #include "ili9341.h"
+#include "ili9486.h"
 #include "ili9488.h"
 #include "st7789.h"
 #include "hx8357.h"
@@ -27,6 +28,7 @@ extern "C" {
 #define TFT_CONTROLLER_ILI9488  1
 #define TFT_CONTROLLER_ST7789	2
 #define TFT_CONTROLLER_HX8357   3
+#define TFT_CONTROLLER_ILI9486  4
 
 /**********************
  *      TYPEDEFS

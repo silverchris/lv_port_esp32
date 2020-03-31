@@ -71,6 +71,8 @@ void disp_spi_add_device(spi_host_device_t host)
             .clock_speed_hz=26*1000*1000,           //Clock out at 26 MHz
 #elif CONFIG_LVGL_TFT_DISPLAY_CONTROLLER == TFT_CONTROLLER_ST7789
             .clock_speed_hz=24*1000*1000,           //Clock out at 24 MHz
+#elif CONFIG_LVGL_TFT_DISPLAY_CONTROLLER == TFT_CONTROLLER_ILI9486
+            .clock_speed_hz=30*1000*1000,           //Clock out at 30 MHz
 #else
             .clock_speed_hz=40*1000*1000,           //Clock out at 40 MHz
 #endif
@@ -105,6 +107,8 @@ void disp_spi_init(void)
             .max_transfer_sz = DISP_BUF_SIZE * 2,
 #elif CONFIG_LVGL_TFT_DISPLAY_CONTROLLER == TFT_CONTROLLER_ST7789
             .max_transfer_sz = DISP_BUF_SIZE * 2,
+#elif CONFIG_LVGL_TFT_DISPLAY_CONTROLLER == TFT_CONTROLLER_ILI9486
+            .max_transfer_sz = DISP_BUF_SIZE * 3,
 #elif CONFIG_LVGL_TFT_DISPLAY_CONTROLLER == TFT_CONTROLLER_ILI9488
             .max_transfer_sz = DISP_BUF_SIZE * 3,
 #elif CONFIG_LVGL_TFT_DISPLAY_CONTROLLER == TFT_CONTROLLER_HX8357
